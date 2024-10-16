@@ -1,0 +1,29 @@
+{% extends "helper_layout.html" %}
+
+{% block title %}
+forget password
+{% endblock %}
+
+{% block head %}
+<style>
+a{
+    text-decoration: none;
+    color: black;
+}
+</style>
+{% endblock %}
+{% block main %}
+<div class="forget_pass">
+    <form method="POST">
+        <label>Email: </label> 
+        <input name="email" id="email" type="text" class="col-md-4">
+        {% if error %}
+        <label style="color: red; font-size: small;">{{ error }}</label>
+        {% endif %}
+        <div class="col-md-12" style="text-align: center;">
+            <button>Send Code</button>
+        </div>
+        <a href="/signup"><span>Don't have an account? Sign up now</span></a>
+    </form>
+</div>
+{% endblock %}

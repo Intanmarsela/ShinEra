@@ -1,0 +1,151 @@
+/* Style for calendar */
+/* Style for Caldendar Header */
+/* Left Group */
+.cal_header{
+    padding: 10px;
+  }
+  button.btn.btn-outline.arrowbtn {
+    font-family: cursive, 'Times New Roman', Times;
+    color: #FF9B9B;
+    border-color: #FF9B9B;
+    cursor: pointer;
+  }
+  button.btn.btn-outline.arrowbtn:hover {
+    background-color: #FF9B9BCC;
+    color: #f9f2ec;
+  }
+  .cal_header .left_group .todaybtn{
+    margin-left: 10px;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+  }
+  .btn-outline-secondary {
+    font-family: cursive, 'Times New Roman', Times;
+  }
+  
+  /* Middle group */
+  .middle_group{
+    font-size: 30px;
+    font-family: cursive, 'Times New Roman', Times;
+    color:#000000;
+    margin: 10px;
+  }
+  
+  /* Right group */
+  .btn-group.right_group{
+    font-family: cursive, 'Times New Roman', Times;
+    display: inline-table;
+  }
+  
+  button.btn.btn-outline-warning:hover{
+    background-color: #FFD6A5;
+    color: #fff;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  
+  
+/* style for the Calendar tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: cursive, 'Times New Roman', Times;
+  }
+  
+  th, td {
+    padding: 8px;
+    border: 1px solid #464646;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #FF9B9BCC;
+    width: 50px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #FFD6A5;
+  }
+
+/* for the year calendar */
+#calendaryear.d-flex {
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  }
+
+/* For the monthly calendar */
+section{
+  padding: 2rem;
+}
+
+table.month_calmonth tr{
+  height: 5rem;
+}
+
+/* For Add event form */
+.AddEvent {
+  display: none;
+  background-color: #C5DABD;
+  padding: 1rem;
+  border-radius: .25rem;
+  margin: .25rem;
+  
+}
+.AddEvent input{
+  border: #ced4da;
+  border-radius: .25rem;
+  padding: .50rem;
+}
+
+.AddEvent button{
+  outline: none;
+  border: 1px solid #dae3fa;
+  border-radius: 5px;
+  text-align: center;
+  font-family: cursive;
+  margin: .25rem;
+
+}
+
+.AddEvent button :hover {
+  background-color: #dae3fa;
+  color: #C5DABD;
+}
+
+select {
+  border: #ced4da;
+  border-radius: .25rem;
+  margin: .50rem;
+}
+
+/* card css */
+.cardwraper {
+ width:fit-content;
+ height: auto;
+ position: relative;
+ display: inline-block;
+}
+.card {
+  display: none;
+}
+
+.card-content {
+ /* Initially hide the card content */
+  padding: 10px;
+  background-color: #C5DABD;
+  padding: 1rem;
+  border-radius: .25rem;
+  margin: .25rem;
+  position: absolute;
+}
+
+/* for the flower icon */
+.material-symbols-outlined {
+  font-weight: 400;
+  opacity: 20;
+  font-size: 12px;
+}
+

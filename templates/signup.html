@@ -1,0 +1,156 @@
+
+{% extends "helper_layout.html" %}
+
+{% block title %}
+    Signup
+{% endblock %}
+{% block head %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.bootstrap5.min.css" integrity="sha512-Ars0BmSwpsUJnWMw+KoUKGKunT7+T8NGK0ORRKj+HT8naZzLSIQoOSIIM3oyaJljgLxFi0xImI5oZkAWEFARSA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="/static/signup.css" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+<div class="signup-form">
+    <form method="POST" class="justify-container-between">
+        <div class="name col-md-4">
+            <label>Email: </label>
+            <input name="email" id="email" type="text" class="form-control">
+            {% if error_email %}
+                <label style="color: red; font-size: small;">{{ error_email }}</label>
+            {% endif %}
+        </div>
+        <div class="user col-md-4">
+            <label>Username: </label> 
+            <input name="username" id="username" type="text" class="form-control">
+            {% if error_user %}
+                <label style="color: red; font-size: small;">{{ error_user }}</label>
+            {% endif %}
+        </div>
+        <div class="password col-md-4">
+            <label>Password: </label> 
+            <input name="password" id="password" type="password" class="form-control">
+            {% if error_pass %}
+                <label style="color: red; font-size: small;">{{ error_pass }}</label>
+            {% endif %}
+        </div>
+        <div class="retype-password col-md-4">
+            <label>Retype-password</label>
+            <input name="retype-password" id="retype-password" type="password" class="form-control">
+            {% if error_pass2 %}
+                <label style="color: red; font-size: small;">{{ error_pass2 }}</label>
+            {% endif %}
+        </div>
+        <div class="gender col-md-4">
+            <label>Gender: </label>
+            <div class="form-group-gender">
+                <select class="form-control" id="gender" name="gender">
+                    <option value="">Select your gender</option>
+                    <option value="F" id="female" name="female">Female</option>
+                    <option value="M" id="male" name="male">Male</option>
+                    <option value="O" id="other" name="other">Other</option>
+                </select>
+            </div>
+            {% if error_gender %}
+                <label style="color: red; font-size: small;">{{ error_gender }}</label>
+            {% endif %}
+        </div>
+        <div class="other_gender col-md-4">
+            <label>Other: </label>
+            <input name="other_gender" id="other_gender" class="form-control">
+            {% if error_other_gender %}
+                <label style="color: red; font-size: small;">{{ error_other_gender }}</label>
+            {% endif %}
+        </div>
+        <div class="age col-md-4">
+            <label>Age: </label>
+            <input name="age" id="age" type="number" class="form-control">
+            {% if error_age %}
+                <label style="color: red; font-size: small;">{{ error_age }}
+                </label>
+            {% endif %}
+        </div>
+        <div class="occupation col-md-4">
+            <label>Occupation: </label>
+            <div class="form-group-occupation">
+                <select class="form-control" id="occupation" name="occupation">
+                    <option value="">Select your occupation</option>
+                    <option value="Accountant">Accountant</option>
+                    <option value="Air traffic controller">Air traffic controller</option>
+                    <option value="Airline Pilot">Airline Pilot</option>
+                    <option value="Aircraft maintenance engineer">Aircraft maintenance engineer</option>
+                    <option value="Anesthesiologist">Anesthesiologist</option>
+                    <option value="Archivist">Archivist</option>
+                    <option value="Baker">Baker</option>
+                    <option value="Bartender">Bartender</option>
+                    <option value="Cardiovascular">Cardiovascular Technologist</option>
+                    <option value="Chef">Chef</option>
+                    <option value="Clinical Social">Clinical Social Worker</option>
+                    <option value="Compliance Officer">Compliance Officer</option>
+                    <option value="Construction">Construction Worker</option>
+                    <option value="Cybersecurity">Cyber Security</option>
+                    <option value="Driver">Driver</option>
+                    <option value="Event coordinator">Event coordinator</option>
+                    <option value="Financial Analayst">Financial Analayst</option>
+                    <option value="Firefighter">Firefighter</option>
+                    <option value="Fitness Instructor">Fitness Instructor</option>
+                    <option value="Gardener">Gardener</option>
+                    <option value="Interior Designer">Interior Designer</option>
+                    <option value="IT Manager">IT Manager</option>
+                    <option value="Lawyer">Lawyer</option>
+                    <option value="Librarian">Librarian</option>
+                    <option value="Massage Therapist">Massage Therapist</option>
+                    <option value="Mental Health Counselor">Mental Health Counselor</option>
+                    <option value="Military Service">Military Service</option>
+                    <option value="Paramedic">Paramedic</option>
+                    <option value="Personal Assistance">Personal Assistance</option>
+                    <option value="Pet Sitter">Pet Sitter</option>
+                    <option value="Photographer">Photographer</option>
+                    <option value="Physician">Physician</option>
+                    <option value="Police">Police Officer</option>
+                    <option value="PR executive">PR executive</option>
+                    <option value="Rehabilitation Counselor">Rehabilitation Counselor</option>
+                    <option value="Retail Hospitality worker">Retail and Hospitality worker</option>
+                    <option value="Sales Manager">Sales Manager</option>
+                    <option value="Security">Security Guard</option>
+                    <option value="Service Center">Service Center</option>
+                    <option value="Social">Social Worker</option>
+                    <option value="Software engineer">Software Engineer</option>
+                    <option value="Sport referee">Sport referee</option>
+                    <option value="Steelworker">Steelworker</option>
+                    <option value="Surgeon">Surgeon</option>
+                    <option value="Teacher">Teacher</option>
+                    <option value="Therapist">Marriage and Family Therapist</option>
+                    <option value="University Student">University Student</option>
+                    <option value="Online tutor">Online tutor</option>
+                    <option value="phlebotomist">phlebotomist</option>
+                    <option value="WebDeveloper">WebDeveloper</option>
+                </select>
+            </div>
+            {% if error_occ %}
+                <label style="color: red; font-size: small;">{{ error_occ }}</label>
+            {% endif %}
+        </div>
+        <div class="row col-md-9">
+            <div class="signup-button">
+                <button type="submit">Signup</button>
+            </div>
+        </div>
+        <div class="row col-md-9 link">
+            <label> Have an account? <a href="/login">Signin</a></label>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js" integrity="sha512-IOebNkvA/HZjMM7MxL0NYeLYEalloZ8ckak+NDtOViP7oiYzG5vn6WVXyrJDiJPhl4yRdmNAG49iuLmhkUdVsQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            $(function(){
+            $("#occupation").selectize();
+            }); 
+        </script>
+        <script>
+            $(function(){
+                $("#gender").selectize();
+            });
+        </script>
+    </form>
+</div>
+{% endblock %}

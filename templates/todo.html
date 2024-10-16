@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Todo 
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/todo.css">
+<script src="/static/js/todo.js" defer></script>
+{% endblock %}
+
+{% block main %}
+<form method="POST">
+    <div class="header_btn">
+        <button type="submit" class="clear_btn" id="deleteCheckedButton">Clear all completed</button> <!--need to make its own action form-->
+        <div class="month_btn">
+            <select name="month" id="month">
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select> 
+        </div>
+        <button class="go" id="go" type="submit">Go</button>
+    </div>
+<div class="container">
+    <form id="checked" action="/todolist">
+        <div class="left_block">
+            <h5>Todo</h5>
+            <div class="add_item"><input id="new_task" class="new_task" placeholder="New Task"><button id="add">Add</button></div>
+            <ul id="todoList">
+                {% for i in range (j)%}
+                <li><div class="m2"><input class="check" type="checkbox" id="checkbox"><label id="todo">{{ todo[i] }}</label><i class="fa-solid fa-trash-can delete-icon" id="delete"></i></div></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </form>
+    <div class="right_block">
+        <h5>Events</h5>
+        {% for c in range (k) %}
+        <ul class="list">
+            <li style="text-decoration: dotted;">{{ date[c] }} {{ list[c] }}</li>
+        </ul>
+        {% endfor %}
+    </div>
+</div>
+<script>
+    var current = new Date().getMonth()
+    document.getElementById('month').selectedIndex = current; 
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $('#add').click(function(event){
+        var month = document.getElementById('month').value;
+        var newTodo = document.getElementById('new_task').value;
+        SendNewTaskToPy(newTodo,month);
+    });
+    $(document).ready(function() {
+        // Function to handle deletion of list item when the delete icon is clicked
+        $('#todoList').on('click', '.delete-icon', function() {
+            var thelabel = $(this).closest('li').find('label#todo');
+            var getLabelValue = thelabel.text();
+            var month = document.getElementById('month').value;
+            sendvalueToPy(getLabelValue,  month);
+            //calling send deleted value to py 
+            // Remove the parent list item of the clicked delete icon
+            $(this).closest('li').remove();
+        });
+    });
+    $('#deleteCheckedButton').click(function(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+        deleteCheckedInputs(); // Call your JavaScript function to delete checked inputs
+    });
+</script>
+</form>
+{% endblock %}

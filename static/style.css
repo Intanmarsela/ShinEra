@@ -1,0 +1,185 @@
+/* Style for index and layout page */
+/* Header */
+.header {
+  background-color: #dae3fa;
+  padding: 2rem 1rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
+}
+/* h1 inside header */
+.header h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 48px;
+  color: #ffe77b;
+  display: inline;
+  vertical-align: bottom;
+  margin-bottom: 1px;
+  text-decoration: none;
+}
+/* for the button-header */
+.button-header {
+  text-align: center;
+  font-family: cursive, 'Times New Roman', Times;
+}
+
+/* The user's Icon */
+.main{
+	cursor: pointer;
+	color: #fff;
+}
+.main:hover{
+  color: #ffe77b;
+}
+
+/* box for the menu section */
+.header .menu {
+  position: absolute;
+  right: 15px;  
+  display: flex;
+  background: #fff;
+  border-radius: 15px;
+  padding: 10px 0px;
+  box-shadow: 0px 0px 3px #ffe77b;
+  display: none;
+  z-index: 9999;
+
+}
+.menu ul li{
+  list-style-type: none;
+}
+.header .main.active .menu{
+	display: flex;
+}
+.header .menu:before{
+	content: "";
+	position: absolute;
+	top: -20px;
+	right: 30px;
+	border: 10px solid;
+	border-color: transparent transparent #fff transparent;
+}
+
+/* for the text and icon in the user's dropdown */
+.menu ul li {
+  display: flex; 
+  padding: 5px 0px;
+  align-items: center;
+  padding-right: 20px;
+}
+
+/* for the text in the user's dropdown */
+.menu ul li span{
+  color:#000000;
+  font-family: cursive, 'Times New Roman', Times;
+  font-size: small;
+  padding: 0px 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.menu ul li a{
+  text-decoration: none;
+}
+/* Hover styles */
+.menu ul li:hover span,
+.menu ul li:hover i {
+  color: #dae3fa;
+}
+/* fro the icon in the user dropdown */
+.menu ul li i {
+  background: #ffe77b;
+  padding: 5px 10px; /* Adjust padding as needed */
+  border-radius: 15px;
+  color: #000000;
+  align-items: center;
+}
+
+/* style for main */
+.py-5 {
+  margin-top: -2.5rem;
+}
+/* Style for index page */
+/* Weather box */
+.weather-box {
+  display: block;
+  background-color:  #f9f2ec;
+  padding: 20px 0px;
+  border-radius: 15px;
+  width: 16rem;
+  font-family: cursive, 'Times New Roman', Times;
+}
+
+#current-condition-icon{
+  width: 5rem;
+}
+#location {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#current-condition {
+  font-size: 15px;
+  margin-left: 2rem;
+}
+
+#temperature {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+#forecast-details {
+  font-size: 16px;
+}
+
+/* item inside weather box */
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.container > div{
+  margin: 5px;
+}
+
+
+    /* Styles for PC displays */
+    @media (min-width: 768px) {
+      .header {
+          width: auto; /* Adjust width for larger screens */
+      }
+  }
+
+  /* Styles for Android displays */
+  @media only screen and (max-device-width: 768px) {
+      .header {
+          width: 90%; /* Adjust width for Android displays */
+      }
+  }
+
+  .go {
+      margin: 1rem;
+      outline: none;
+      border: 1px solid #dae3fa;
+      border-radius: 5px;
+      text-align: center;
+      font-family: cursive;
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+  .go:hover {
+      background-color: #dae3fa;
+      color: #C5DABD;
+  }
+
+.pentol{
+  height: 187px;
+}
+
+.indexTodo{
+  font-family: cursive;
+  background-color:  #C5DABD;
+  border-radius: 15px;
+  padding: 1rem;
+
+}

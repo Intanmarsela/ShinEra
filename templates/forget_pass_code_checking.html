@@ -1,0 +1,35 @@
+{% extends "helper_layout.html" %}
+
+{% block title %}
+code checking
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/forget_pass.css">
+{% endblock %}
+
+{% block main %}
+<div class="forget_pass_code_checking">
+    <form method="POST" action="/forget_pass_code_checking">
+        <div class="codes">
+            <input name="1" id="1" type="text" maxlength="1">
+            <input name="2" id="2" type="text" maxlength="1">
+            <input name="3" id="3" type="text" maxlength="1">
+            <input name="4" id="4" type="text" maxlength="1">
+            <input name="5" id="5" type="text" maxlength="1">
+            <input name="6" id="6" type="text" maxlength="1">
+        </div>
+        {% if error %}
+        <label style="color: red; font-size: small;">{{ error }}</label>
+        {% endif %}
+        <div style="text-align: center;">
+            <button>Enter</button>
+        </div>
+    </form>
+    <div style="text-align: center;">
+        <form action="/resend_code_fp" class="resend_code" method="POST">
+            <button name="Resend" type="submit">Resend Code</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

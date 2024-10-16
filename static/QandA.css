@@ -1,0 +1,18 @@
+.answer{
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+h2{
+    background-color: #C5DABD;
+    text-align: center;
+    color: #ffe77b;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-family: cursive, 'Times New Roman', Times;
+    margin: 10px;
+}
+
+
+
+

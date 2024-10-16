@@ -1,0 +1,92 @@
+{% extends "helper_layout.html" %}
+
+{% block title %}
+   Profile
+{% endblock %}
+
+{% block main %}
+<div class="profile">
+   <form action="/profile" method="POST">
+      <div class="name row">
+         <label class="col-md-2">Username: </label>
+         <div class="col-md-4">
+            <input class="form-control" type="text" name="username" id="username" value="{{ username }}">
+         </div>
+         <button type="submit" class="col-md-2">change</button>
+      </div>
+      <div class="username row">
+         <label class="col-md-2">Age: </label>
+         <div class="col-md-4">
+            <input class="form-control" type="text" name="age" id="age" value="{{ age }}">
+         </div>
+         <button type="submit" class="col-md-2">change</button>
+      </div>
+      <div class="occupation row">
+         <label class="col-md-2">Occupation: </label>
+         <div class="col-md-4">
+            <div class="form-group-occupation">
+               <select class="form-control" id="occupation" name="occupation">
+                   <option value="{{ occupation }}">{{ occupation }}</option>
+                   <option value="Accountant">Accountant</option>
+                   <option value="Air traffic controller">Air traffic controller</option>
+                   <option value="Airline Pilot">Airline Pilot</option>
+                   <option value="Aircraft maintenance engineer">Aircraft maintenance engineer</option>
+                   <option value="Anesthesiologist">Anesthesiologist</option>
+                   <option value="Archivist">Archivist</option>
+                   <option value="Baker">Baker</option>
+                   <option value="Bartender">Bartender</option>
+                   <option value="Cardiovascular">Cardiovascular Technologist</option>
+                   <option value="Chef">Chef</option>
+                   <option value="Clinical Social">Clinical Social Worker</option>
+                   <option value="Compliance Officer">Compliance Officer</option>
+                   <option value="Construction">Construction Worker</option>
+                   <option value="Cybersecurity">Cyber Security</option>
+                   <option value="Driver">Driver</option>
+                   <option value="Event coordinator">Event coordinator</option>
+                   <option value="Financial Analayst">Financial Analayst</option>
+                   <option value="Firefighter">Firefighter</option>
+                   <option value="Fitness Instructor">Fitness Instructor</option>
+                   <option value="Gardener">Gardener</option>
+                   <option value="Interior Designer">Interior Designer</option>
+                   <option value="IT Manager">IT Manager</option>
+                   <option value="Lawyer">Lawyer</option>
+                   <option value="Librarian">Librarian</option>
+                   <option value="Massage Therapist">Massage Therapist</option>
+                   <option value="Mental Health Counselor">Mental Health Counselor</option>
+                   <option value="Military Service">Military Service</option>
+                   <option value="Paramedic">Paramedic</option>
+                   <option value="Personal Assistance">Personal Assistance</option>
+                   <option value="Pet Sitter">Pet Sitter</option>
+                   <option value="Photographer">Photographer</option>
+                   <option value="Physician">Physician</option>
+                   <option value="Police">Police Officer</option>
+                   <option value="PR executive">PR executive</option>
+                   <option value="Rehabilitation Counselor">Rehabilitation Counselor</option>
+                   <option value="Retail Hospitality worker">Retail and Hospitality worker</option>
+                   <option value="Sales Manager">Sales Manager</option>
+                   <option value="Security">Security Guard</option>
+                   <option value="Service Center">Service Center</option>
+                   <option value="Social">Social Worker</option>
+                   <option value="Software engineer">Software Engineer</option>
+                   <option value="Sport referee">Sport referee</option>
+                   <option value="Steelworker">Steelworker</option>
+                   <option value="Surgeon">Surgeon</option>
+                   <option value="Teacher">Teacher</option>
+                   <option value="Therapist">Marriage and Family Therapist</option>
+                   <option value="University Student">University Student</option>
+                   <option value="Online tutor">Online tutor</option>
+                   <option value="phlebotomist">phlebotomist</option>
+                   <option value="WebDeveloper">WebDeveloper</option>
+               </select>
+           </div>
+         </div>
+         <button type="submit" class="col-md-2">change</button>
+      </div>
+      <label style="color: red; font-size: small;">{{ error_profile }}</label>
+      <label style="color: #FFD6A5; font-size: small;">{{ confirm }}</label>
+
+      <button><a href="/">Back</a></button>
+   </form>
+</div>
+
+{% endblock %}

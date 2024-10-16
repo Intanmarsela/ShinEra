@@ -1,0 +1,60 @@
+.signup-form form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.name{
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+.user{
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+.password{
+    margin-right: 2rem;
+    margin-left: 2rem;
+
+}
+.retype-password{
+    margin-right: 2rem;
+    margin-left: 2rem;
+
+}
+.gender{
+    margin-right: 2rem;
+    margin-left: 2rem;
+
+}
+.other_gender{
+    margin-right: 2rem;
+    margin-left: 2rem;
+
+}
+.age{
+    margin-right: 2rem;
+    margin-left: 2rem;
+
+}
+.occupation{
+    margin-right: 2rem;
+    margin-left: 2rem;
+
+}
+
+.signup-button button{
+    margin: 2rem;
+    border-radius: 5px;
+}
+
+.link a{
+    text-decoration: none;
+    color: #ffe77b ;    
+}
+
+.signup-button a{
+    text-decoration: none;
+    color: black ;
+    font-family: cursive, 'Times New Roman', Times;
+
+}

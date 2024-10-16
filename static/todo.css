@@ -1,0 +1,94 @@
+.header_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+}
+
+.clear_btn{
+    margin-left: 22px;
+    font-family: cursive, 'Times New Roman', Times;
+    border-radius: 5px;
+    background-color: #dae3fa;
+    border: 1px solid grey;
+}
+
+.month_btn {
+    margin-left: auto;
+    font-family: cursive, 'Times New Roman', Times;
+    margin-right: 22px;
+}
+
+
+.month_btn select{
+    border-radius: 5px;
+    background-color: #fee3ef;
+    padding: 10px;
+}
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.left_block, .right_block {
+    flex: 1;
+    box-sizing: border-box;
+    font-family: cursive, 'Times New Roman', Times;
+}
+
+.left_block {
+    background-color: #edf9fd;
+    border: 1px solid #3b6a2b;
+}
+
+.right_block {
+    background-color: #f6fded;
+    border: 1px solid #2b306a;
+}
+
+h5 {
+    margin: 10px;
+}
+
+.left_block li{
+    list-style: none;
+    text-align: left;
+}
+
+.left_block .check{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 10px;
+}
+
+.m2{
+    display: inline-flex;
+}
+
+.list{
+    text-align: left;
+}
+
+.fa-trash-can{
+    text-align: right;
+    align-self: center;
+}
+
+
+.add_item{
+    margin: 1rem;
+}
+
+.add_item input{
+    margin-right: 1rem;
+}
+
+.add_item button{
+    font-family: cursive, 'Times New Roman', Times;
+    border-radius: 5px;
+    background-color: #dae3fa;
+    border: 1px solid grey;
+}
+label{
+    padding-right: 1rem;
+}

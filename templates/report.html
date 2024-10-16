@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+{% endblock %}
+
+{% block title %}
+    Report
+{% endblock %}
+
+{% block main %}
+<form method="POST">
+    <select class="form-control-sm col-md-2" name="month" id="month">
+        <option value="01">January</option>
+        <option value="02">February</option>
+        <option value="03">March</option>
+        <option value="04">April</option>
+        <option value="05">May</option>
+        <option value="06">June</option>
+        <option value="07">July</option>
+        <option value="08">August</option>
+        <option value="09">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>   
+    </select>
+    <button id="go" type="submit">Go</button>
+    <div id="Body"></div>
+    <div id="Mind"></div>
+    <div id="Social"></div>
+    <div id="Goal"></div>
+    <div id="Sum"></div>
+<script>
+    // Get the JSON data from the Flask app
+    var graphs1 = {{ graphJSONB | safe}};
+    var graphs2 = {{ graphJSONM | safe}};
+    var graphs3 = {{ graphJSONS | safe}};
+    var graphs4 = {{ graphJSONG |safe}};
+    var line = {{ Sum | safe }};
+
+    // Render the chart
+    Plotly.newPlot('Body', graphs1);
+    Plotly.newPlot('Mind', graphs2);
+    Plotly.newPlot('Social', graphs3);
+    Plotly.newPlot('Goal', graphs4);
+    Plotly.newPlot('Sum', line);
+</script>
+<script>
+    var current = new Date().getMonth();
+    document.getElementById("month").selectedIndex = current;
+</script>
+    <style>
+    #go {
+        margin: 1rem;
+        outline: none;
+        border: 1px solid #dae3fa;
+        border-radius: 5px;
+        text-align: center;
+        font-family: cursive;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #go:hover {
+        background-color: #dae3fa;
+        color: #C5DABD;
+    }
+    </style>
+</form>
+{% endblock %}
+{% block footer %}
+Powered by <a href="https://plotly.com/" title="Plotly">Plotly.com</a>
+{% endblock %}

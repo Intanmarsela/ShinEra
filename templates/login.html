@@ -1,0 +1,27 @@
+{% extends "helper_layout.html" %}
+
+{% block title %}
+    login
+{% endblock %}
+
+{% block main %}
+<form action="/login" method="POST">
+    <label>Username :</label>
+    <input autocomplete="off" id="username" name="username" type="text">
+    <br>
+    <label>Password :</label>
+    <input id="password" name="password" type="password">
+    <br>
+    {% if error_login %}
+    <label style="color: red; font-size: small;">{{ error_login }}</label>
+    {% endif %}
+    <br>
+    <button type="submit">Log In</button>
+    <br>
+    <div class="text">
+        <a href="/forget_pass">Forgot password?</a>
+        <br>
+        <a href="/signup"><span>Don't have an account? Sign up now</span></a>
+    </div>
+</form>
+{% endblock %}

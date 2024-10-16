@@ -1,0 +1,99 @@
+/* Header for login.html, logout.html*/
+.header {
+    background-color: #dae3fa;
+    padding: 2rem 1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+    text-align: center;
+  }
+/* h1 for the name and logo for login.html, logout.html*/
+h1{
+    font-family: cursive, 'Times New Roman', Times;
+    font-size: 48px;
+    color: #ffe77b;
+    vertical-align: bottom;
+    align-items: center;
+}
+/* form for login*/
+form{
+    margin: 10px;
+    text-align: center;
+    background-color: #C5DABD;
+    padding: 3rem;
+    border-radius: 15px;
+}
+/* lable for login form and signup form*/
+label {
+    font-family: cursive, 'Times New Roman', Times;
+    display: inline;
+    font-size: 24px;
+    color: #ffe77b;
+    padding-right: 5px;
+}
+
+/* input for login */
+input{
+    background-color: #dae3fa;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid white;
+    font-family: cursive;
+
+}
+/*SignIn button in login.html */
+button{
+    margin: 1rem;
+    outline: none;
+    border: 1px solid #dae3fa;
+    border-radius: 5px;
+    text-align: center;
+    font-family: cursive;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+button:hover{
+    background-color: #dae3fa;
+    color: #C5DABD;
+}
+/* Sing in span in login.html */
+span{
+    font-family: cursive;
+    color: white;
+    font-size: 16px;
+}
+/* hyperlink in login.html */
+.text a{
+    font-size: 16px;
+    font-family: cursive;
+    text-decoration: none;
+    color: white;
+}
+/* Bye gif in logout.html */
+.bye{
+    align-items: center;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Group button in logout.html */
+.button-group-enter{
+    display: block;
+    margin: 1rem;
+}
+.button-group-enter button{
+    margin: 0;
+}
+
+/* for link in profile */
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* label for profile */
+.profile label{
+    text-align: left;
+}
