@@ -14,4 +14,8 @@ Calendar Views:
   Weekly Calendar: Plan your week with 24-hour detail (hour-based event display in progress).
 
 Design
+<<<<<<< HEAD
 Shinera features a game-like design to make daily use enjoyable and something to look forward to.
+=======
+Shinera features a game-like design to make daily use enjoyable and something to look forward to.
+>>>>>>> 9f74281ee7d9cd9b1c643a4ce6bbcc312eb9f28d
